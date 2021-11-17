@@ -20,5 +20,20 @@ class MainActivity : AppCompatActivity() {
 
         val id_ = jsonCharizard.getInt("id")
         Log.d("readingJSONS","id $id_")
+
+
+        val tipo = jsonCharizard.getJSONArray("types").getJSONObject(0).getJSONObject("type").getString("name")
+        Log.d("readingJSONS","tipo $tipo")
+
+
+        val ataque = jsonCharizard.getJSONArray("stats").getJSONObject(1).getJSONObject("stat").getString("name")
+        Log.d("readingJSONS","ataque $ataque")
+
+        val defensa = jsonCharizard.getJSONArray("stats").getJSONObject(2).getJSONObject("stat").getString("name")
+        Log.d("readingJSONS","defensa $defensa")
+
+        val hp_ = jsonCharizard.getJSONArray("stats").getJSONObject(0).getJSONObject("stat").getString("name")
+        Log.d("readingJSONS","hp $hp_")
+
     }
 }
